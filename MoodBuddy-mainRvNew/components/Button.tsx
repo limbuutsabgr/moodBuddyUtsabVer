@@ -28,10 +28,10 @@ export default function Button({ label, theme }: Props) {
   return (
     <View style = {styles.centerAll}>
       <View style = {[styles.text,{color: '#fff'}]}>
-          <h1>Habit List</h1>
+          <Text style={[styles.text,{color: '#fff'}]}>Habit List</Text>
             {habitList.map((item, index) => (
               <View key={index} style={{ flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center' }}>
-                <h2 key={index}>{item}</h2>
+                <Text key={index}>{item}</Text>
                 <Pressable onPress={() => removeHandler(item)}>
                   <FontAwesome
                   name="minus"
